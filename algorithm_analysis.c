@@ -1,14 +1,14 @@
-/* SIRALI, TERSDEN SIRALI VE RANDOM DİZİLER İLE INSERTION SORT VE MERGE SORT İÇİN KARMAŞIKLIĞIN HESAPLANMASI VE KARŞILAŞTIRILMASI */
+/* SIRALI, TERSDEN SIRALI VE RANDOM DÃZÃLER ÃLE INSERTION SORT VE MERGE SORT ÃÃ‡ÃN KARMAÃIKLIÃIN HESAPLANMASI VE KARÃILAÃTIRILMASI */
 #include <stdio.h>
 #include <stdlib.h> 
-#include <time.h>  //rand fonksiyonu için kütüphane
-#include <math.h>  //log2 için kütüphane
+#include <time.h>  //rand fonksiyonu iÃ§in kÃ¼tÃ¼phane
+#include <math.h>  //log2 iÃ§in kÃ¼tÃ¼phane
 
 double t,t1;
 clock_t start,end,end2;
 
 
-//insertion sort sıralama algoritması
+//insertion sort sÃ½ralama algoritmasÃ½
 void insertionSort(int A[], int n) 
 { 
 	int i, key, j; 
@@ -24,7 +24,7 @@ void insertionSort(int A[], int n)
 		A[j + 1] = key; 
 	} 
 } 
-//merge sort için geri birleştirme algoritması
+//merge sort iÃ§in geri birleÃ¾tirme algoritmasÃ½
 void merge(int A[], int l, int m, int r) 
 { 
 	int i, j, k; 
@@ -65,7 +65,7 @@ void merge(int A[], int l, int m, int r)
 		k++; 
 	} 
 } 
-//merge sort sıralama algoritması
+//merge sort sÃ½ralama algoritmasÃ½
 void mergeSort(int A[], int l, int r) 
 { 
 	if (l < r) 
@@ -76,7 +76,7 @@ void mergeSort(int A[], int l, int r)
 		merge(A, l, m, r); 
 	} 
 } 
-//dizi elemanlarını yazdırma fonksiyonu
+//dizi elemanlarÃ½nÃ½ yazdÃ½rma fonksiyonu
 void printArray(int A[], int size) 
 { 
 	int i; 
@@ -116,7 +116,7 @@ void m_complexity(int n){
    	printf("\nMerge sort karmasikligi %f \n", m_complexity);
 }
 
-//aynı diziye iki sıralama algoritmasını uygulamak için fonksiyon
+//aynÃ½ diziye iki sÃ½ralama algoritmasÃ½nÃ½ uygulamak iÃ§in fonksiyon
 void Sort(int A[], int n){
 	printf("\nOrjinal dizi \n");
 	printArray(A, n);
@@ -175,12 +175,12 @@ int main()
 	char secim='a';
 	char secim2='a';															
 	char secim3='a';
-	srand (time(NULL));  //random üretilen sayının zamana bağlı değişmesi için
-	//sıralı dizi oluşturma
+	srand (time(NULL));  //random Ã¼retilen sayÃ½nÃ½n zamana baÃ°lÃ½ deÃ°iÃ¾mesi iÃ§in
+	//sÃ½ralÃ½ dizi oluÃ¾turma
 	for (i=0; i < 1000; i++) {
         A[i]=i+1;
     }
-    //tersden sıralı dizi oluşturma
+    //tersden sÃ½ralÃ½ dizi oluÃ¾turma
     for(i=0; i<1000; i++)
 	{
 		B[i]=i+1;
@@ -195,17 +195,17 @@ int main()
 		i++;
 		j--;
 	}
-    //100 elemanlı random dizi
+    //100 elemanlÃ½ random dizi
 	for (i=0;i<100;i++)
 	{
 		C[i]=rand() %999+1;
 	}
-	 //500 elemanlı random dizi
+	 //500 elemanlÃ½ random dizi
 	for (i=0;i<500;i++)
 	{
 		D[i]=rand() %999+1;
 	}
-	 //1000 elemanlı random dizi
+	 //1000 elemanlÃ½ random dizi
 	for (i=0;i<1000;i++)
 	{
 		E[i]=rand() %999+1;
@@ -220,11 +220,11 @@ int main()
 				do{
 					switch(secim2){ //MENU2
 						case 'a': 
-						case 'A': secim3=menu3();  //SIRALI DİZİ SEÇİLİRSE
+						case 'A': secim3=menu3();  //SIRALI DÃZÃ SEÃ‡ÃLÃRSE
 							do{
 								switch(secim3){ //MENU3
 								case 'a':
-								case 'A':  //sıralı dizi için insertion sort
+								case 'A':  //sÃ½ralÃ½ dizi iÃ§in insertion sort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(A, 1000);
@@ -238,7 +238,7 @@ int main()
 									return 0;
 									break;
 								case 'b':
-								case 'B': //sıralı dizi için merge sort
+								case 'B': //sÃ½ralÃ½ dizi iÃ§in merge sort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(A, 1000);
@@ -252,7 +252,7 @@ int main()
 									return 0; 
 									break;
 								case 'c':
-								case 'C': //sıralı dizi için hem insertion hem mergesort
+								case 'C': //sÃ½ralÃ½ dizi iÃ§in hem insertion hem mergesort
 									system("cls");
 									Sort(A,1000); 
 									t=(double)(end - start);
@@ -262,7 +262,7 @@ int main()
 									return 0;
 									break;
 								case 'd':
-								case 'D': system("cls"); break;		//geri sön											
+								case 'D': system("cls"); break;		//geri sÃ¶n											
 								default : printf("\nA-D arasinda secim giriniz\n "); secim3=menu3(); break;
 							}
 							}while(secim3!='d' && secim3!='D'); secim2=menu2(); system("cls");break;
@@ -271,7 +271,7 @@ int main()
 							do{
 								switch(secim3){
 								case 'a':
-								case 'A': //ters sıralı dizi için insertionsort
+								case 'A': //ters sÃ½ralÃ½ dizi iÃ§in insertionsort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(B, 1000);
@@ -285,7 +285,7 @@ int main()
 									return 0;
 									break;
 								case 'b':
-								case 'B': //ters sıralı dizi için mergesort
+								case 'B': //ters sÃ½ralÃ½ dizi iÃ§in mergesort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(B, 1000);
@@ -299,7 +299,7 @@ int main()
 									return 0;
 									break;
 								case 'c':
-								case 'C': //ters sıralı dizi için hem insertion hem merge
+								case 'C': //ters sÃ½ralÃ½ dizi iÃ§in hem insertion hem merge
 									system("cls");
 									Sort(B, 1000); 
 									t=(double)(end - start);
@@ -309,7 +309,7 @@ int main()
 									return 0;
 									break;
 								case 'd':
-								case 'D': system("cls"); break;				 //dizi seçme menüsüne geri dön									
+								case 'D': system("cls"); break;				 //dizi seÃ§me menÃ¼sÃ¼ne geri dÃ¶n									
 								default : printf("\nA-D arasinda secim giriniz\n "); secim3=menu3(); break;
 							}
 							}while(secim3!='d' && secim3!='D'); secim2=menu2(); system("cls"); break;
@@ -318,7 +318,7 @@ int main()
 							do{
 								switch(secim3){
 								case 'a':
-								case 'A': //100 random sıralı dizi için insertion sort
+								case 'A': //100 random sÃ½ralÃ½ dizi iÃ§in insertion sort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(C, 100);
@@ -332,7 +332,7 @@ int main()
 									return 0;
 									break;
 								case 'b':
-								case 'B': //100 random sıralı dizi için merge sort
+								case 'B': //100 random sÃ½ralÃ½ dizi iÃ§in merge sort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(C, 100);
@@ -346,7 +346,7 @@ int main()
 									return 0; 
 									break;
 								case 'c':
-								case 'C': //100 random sıralı dizi için hem insertion sort hem mergesort
+								case 'C': //100 random sÃ½ralÃ½ dizi iÃ§in hem insertion sort hem mergesort
 									system("cls");
 									Sort(C, 100); 
 									t=(double)(end - start);
@@ -356,7 +356,7 @@ int main()
 									return 0; 
 									break;
 								case 'd':
-								case 'D': system("cls"); break;	 //dizi seçme menüsüne geri dön												
+								case 'D': system("cls"); break;	 //dizi seÃ§me menÃ¼sÃ¼ne geri dÃ¶n												
 								default : printf("\nA-D arasinda secim giriniz\n "); secim3=menu3(); break;
 							}
 							}while(secim3!='d' && secim3!='D'); secim2=menu2(); system("cls"); break;
@@ -365,7 +365,7 @@ int main()
 							do{
 								switch(secim3){
 								case 'a':
-								case 'A': //500 random sıralı dizi için insertion sort 
+								case 'A': //500 random sÃ½ralÃ½ dizi iÃ§in insertion sort 
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(D, 500);
@@ -379,7 +379,7 @@ int main()
 									return 0;
 									break;
 								case 'b':
-								case 'B':  //500 random sıralı dizi için  mergesort
+								case 'B':  //500 random sÃ½ralÃ½ dizi iÃ§in  mergesort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(D, 500);
@@ -393,7 +393,7 @@ int main()
 									return 0; 
 									break;
 								case 'c':
-								case 'C': //500 random sıralı dizi için hem insertion sort hem mergesort
+								case 'C': //500 random sÃ½ralÃ½ dizi iÃ§in hem insertion sort hem mergesort
 									system("cls");
 									Sort(D, 500); 
 									t=(double)(end - start);
@@ -403,7 +403,7 @@ int main()
 									return 0;
 									break;
 								case 'd':
-								case 'D': system("cls"); break;	 //dizi seçme menüsüne geri dön												
+								case 'D': system("cls"); break;	 //dizi seÃ§me menÃ¼sÃ¼ne geri dÃ¶n												
 								default : printf("\nA-D arasinda secim giriniz \n"); secim3=menu3(); break;
 							}
 							}while(secim3!='d' && secim3!='D'); secim2=menu2(); system("cls"); break;
@@ -412,7 +412,7 @@ int main()
 							do{
 								switch(secim3){
 								case 'a':
-								case 'A': //1000 random sıralı dizi için  insertion sort 
+								case 'A': //1000 random sÃ½ralÃ½ dizi iÃ§in  insertion sort 
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(E, 1000);
@@ -426,7 +426,7 @@ int main()
 									return 0; 
 									break;
 								case 'b':
-								case 'B':  //1000 random sıralı dizi için  mergesort
+								case 'B':  //1000 random sÃ½ralÃ½ dizi iÃ§in  mergesort
 									system("cls");
 									printf("\nOrjinal dizi \n");
 									printArray(E, 1000);
@@ -440,7 +440,7 @@ int main()
 									return 0;
 									break;
 								case 'c':
-								case 'C': //1000 random sıralı dizi için hem insertion sort hem mergesort
+								case 'C': //1000 random sÃ½ralÃ½ dizi iÃ§in hem insertion sort hem mergesort
 									system("cls");
 									Sort(E, 1000);
 									t=(double)(end - start);
@@ -450,17 +450,17 @@ int main()
 									return 0;
 									break;
 								case 'd':
-								case 'D': system("cls"); break;	 //dizi seçme menüsüne geri dön												
+								case 'D': system("cls"); break;	 //dizi seÃ§me menÃ¼sÃ¼ne geri dÃ¶n												
 								default : printf("\nA-D arasinda secim giriniz\n "); secim3=menu3(); break;
 							}
 							}while(secim3!='d' && secim3!='D'); secim2=menu2(); system("cls"); break;
 						case 'f':
-						case 'F': system("cls"); break;		//ilk menüye geri dön										   
+						case 'F': system("cls"); break;		//ilk menÃ¼ye geri dÃ¶n										   
 						default : printf("A-F arasinda secim giriniz "); secim2=menu2(); break;
 					}
 					}while(secim2!='f' && secim2!='F');  secim=menu(); system("cls"); break;
 			case 'b':
-			case 'B': printf("\nProgram Sonlaniyor...\n"); //çıkış
+			case 'B': printf("\nProgram Sonlaniyor...\n"); //Ã§Ã½kÃ½Ã¾
 					  return 0; break;
 			default : printf("\nA-B arasinda secim giriniz \n"); secim=menu(); break;
 		}
