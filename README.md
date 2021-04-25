@@ -1,2 +1,3 @@
-# projects
-CALCULATION AND COMPARISON OF COMPLEXITY FOR INSERTION SORT AND MERGE SORT WITH SEQUENTIAL, REVERSE ORDERED AND RANDOM ARRAYS
+ALGORITHM ANALYSIS PROJECT
+
+This project is about the comparison of time complexity for Insertion Sort and Merge Sort in terms of sequential, reverse ordered, and random arrays.
