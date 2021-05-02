@@ -5,9 +5,10 @@
 
 ### ALGORITHM ANALYSIS PROJECT
 
-This project is about the comparison of time complexity for Insertion Sort and Merge Sort in terms of sequential, reverse ordered, and random arrays.
+This project compares the time complexity of sequential, reverse ordered, and randomly ordered arrays with the different number of elements for "Insertion Sort" and "Merge Sort" in terms of running time and the general formula.
 
-### Certification
+### The Menu and Project
+
 ![](img/1.png)
 
 ![](img/2.png)
@@ -28,9 +29,15 @@ This project is about the comparison of time complexity for Insertion Sort and M
 
 ![](img/10.png)
 
+### Comparison of Running Time 
+
 ![](img/11.png)
 
+### Comparison of General Formula  
+
 ![](img/12.png)
+
+### Graphs
 
 ![](img/13.png)
 
