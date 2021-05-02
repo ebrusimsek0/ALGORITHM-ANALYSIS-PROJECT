@@ -7,7 +7,7 @@
 
 This project compares the time complexity of sequential, reverse ordered, and randomly ordered arrays with the different number of elements for "Insertion Sort" and "Merge Sort" in terms of running time and the general formula.
 
-### The Menu and Project
+### Example of the menu and working project
 
 ![](img/1.png)
 
